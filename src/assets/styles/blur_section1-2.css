@@ -1,0 +1,10 @@
+@import url(vars.css);
+
+.blur img {
+    width: 1600px;
+    position: absolute;
+    display: flex; 
+    justify-content: center;
+    top: 100%;
+    left: -5%;
+}

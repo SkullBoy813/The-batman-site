@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Fiorello;
+    src: url(../fonts/Fiorello.otf);
+}
+
+:root {
+    --default-font: Fiorello, sans-serif;
+    --bright-red:#F20707;
+    --brown-red:#8C160B;
+    --dark-red:#BF0B0B;
+    --darker-red:#400A0A;
+}
