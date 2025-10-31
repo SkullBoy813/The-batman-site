@@ -1,0 +1,41 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 100px;
+}
+
+.dc-logo {
+    width: auto;
+    height: 70%;
+    margin: 15px;
+}
+
+#nav li{
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: var(--default-font);
+    font-size: 36px;
+    transition: text-shadow 0.3s ease-in-out;
+}   
+
+#nav a:hover {
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.356), /* First layer of glow (blue) */
+    0 0 20px rgba(255, 0, 0, 0.315), /* Second layer, more intense */
+    0 0 30px rgba(255, 0, 0, 0.274), /* Third layer, even more intense */
+    0 0 30px rgba(255, 0, 0, 0.377)
+}
+
+.warner-logo {
+    width: auto;
+    height: 70%;
+    margin: 15px;
+}
+
