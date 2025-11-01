@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <img src="src/assets/imgs/Dc logo.svg" class="dc-logo">
+        <img src="src/assets/imgs/Section 1/Dc logo.svg" class="dc-logo">
         <nav id="nav">
             <ul class="nav-list">
                 <li><a href="#">INICIO</a></li>
@@ -20,26 +20,31 @@
                 <li><a href="#">INGRESSOS</a></li>
             </ul>
         </nav>
-        <img src="src/assets/imgs/Warner Bors Logo.svg" class="warner-logo">
+        <img src="src/assets/imgs/Section 1/Warner Bors Logo.svg" class="warner-logo">
     </header>
     <section class="banner">
-        <img src="src/assets/imgs/section 1 background.webp" alt="Batman" class="bg-img">
+        <img src="src/assets/imgs/Section 1/Banner.svg" alt="Batman" class="bg-img">
     </section>
 
     <section class="section-2">
         <h1>ELENCO</h1>
-        <div class="cards">
-            <div class="card secundario">
-                <img src="src/assets/imgs/Zöe Kravitz.webp" alt="Zoe Kravitz">
+        <div class="cards-container">
+            <button class="nav-btn prev-btn" id="prevBtn">‹</button>
+            <div class="cards">
+                <div class="card secundario">
+                    <img src="src/assets/imgs/Section 2/Zöe Kravitz.webp" alt="Zoe Kravitz">
+                </div>
+                <div class="card destaque">
+                    <img src="src/assets/imgs/Section 2/Robert Pattison.webp" alt="Robert Pattinson">
+                </div>
+                <div class="card secundario">
+                    <img src="src/assets/imgs/Section 2/Paul Dano.jpg" alt="Paul Dano">
+                </div>
             </div>
-            <div class="card destaque">
-                <img src="src/assets/imgs/Robert Pattison.webp" alt="Robert Pattinson">
-            </div>
-            <div class="card secundario">
-                <img src="src/assets/imgs/Paul Dano.jpg" alt="Paul Dano">
-            </div>
+            <button class="nav-btn next-btn" id="nextBtn">›</button>
         </div>
     </section>
+    <script src="src/assets/scripts/card-switcher.js"></script>
 
     <footer>
         <p>© 2025 Warner Bros. Todos os direitos reservados.</p>

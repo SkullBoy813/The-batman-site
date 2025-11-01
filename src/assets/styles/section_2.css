@@ -2,7 +2,7 @@
 
 .section-2 {
     width: 100%;
-    background: linear-gradient(180deg, #300000, #000);
+    background: linear-gradient(180deg, #2C0000, #000);
 }   
 
 h1{
@@ -14,11 +14,22 @@ h1{
   padding: 30px;
 }
 
+.cards-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
 .cards {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card {
@@ -30,6 +41,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card::before {
@@ -41,6 +53,8 @@ h1{
   filter: blur(6px);
   transform: scale(1.2);
   z-index: 0;
+  transition: opacity 0.35s ease, background-image 0.35s ease;
+  opacity: 1;
 }
 
 .card img {
@@ -50,6 +64,44 @@ h1{
   object-fit: cover;
   border-radius: 15px;
   z-index: 1;
+  transition: opacity 0.35s ease;
+  opacity: 1;
+}
+
+.card.switching-out {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.card.switching-in {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.card.switching-in.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.card.switching-out img,
+.card.switching-in img {
+  opacity: 0;
+}
+
+.card.switching-in.active img {
+  opacity: 1;
+  transition: opacity 0.35s ease 0.15s;
+}
+
+.card.switching-out::before,
+.card.switching-in::before {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card.switching-in.active::before {
+  opacity: 1;
+  transition: opacity 0.35s ease 0.15s;
 }
 
 .card::after {
@@ -61,16 +113,63 @@ h1{
   z-index: 0.5;
 }
 
+.destaque {
+  width: 350px;
+  height: 600px;
+  margin-bottom: 60px;
+}
+
+.secundario {
+  width: 250px;
+  height: 500px;
+  margin-bottom: 60px;
+}
+
+.nav-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  margin: 0 30px;
+  font-family: var(--default-font);
+  font-weight: lighter;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+}
+
+.nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Update background images dynamically via CSS variables */
 .card.secundario:nth-of-type(1)::before {
-  background-image: url("/src/assets/imgs/Zöe Kravitz.webp");
+  background-image: var(--bg-image-left, url("/src/assets/imgs/Section 2/Zöe Kravitz.webp"));
 }
 
 .card.destaque::before {
-  background-image: url("/src/assets/imgs/Robert Pattison.webp");
+  background-image: var(--bg-image-center, url("/src/assets/imgs/Section 2/Robert Pattison.webp"));
 }
 
 .card.secundario:nth-of-type(3)::before {
-  background-image: url("/src/assets/imgs/Paul Dano.jpg");
+  background-image: var(--bg-image-right, url("/src/assets/imgs/Section 2/Paul Dano.jpg"));
 }
 
 
