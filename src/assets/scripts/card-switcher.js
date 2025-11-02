@@ -8,6 +8,16 @@ const castMembers = [
     "src/assets/imgs/Section 2/John Turturro.jpg"
 ];
 
+// Actor names and their characters
+const castInfo = [
+    { actor: "Zöe Kravitz", character: "Selina Kyle / Catwoman" },
+    { actor: "Robert Pattinson", character: "Bruce Wayne / Batman" },
+    { actor: "Paul Dano", character: "Edward Nashton / The Riddler" },
+    { actor: "Colin Farrell", character: "Oswald Cobblepot / The Penguin" },
+    { actor: "Jeffrey Wright", character: "James Gordon" },
+    { actor: "John Turturro", character: "Carmine Falcone" }
+];
+
 // Cast member sets - each set contains [left, center, right] indices
 const castSets = [
     [0, 1, 2], // First 3 actors: Zoe, Robert, Paul
@@ -28,10 +38,18 @@ function updateCardImages(animate = true) {
     const centerCard = centerCardElement.querySelector('img');
     const rightCard = rightCardElement.querySelector('img');
     
+    const leftCardInfo = leftCardElement.querySelector('.card-info');
+    const centerCardInfo = centerCardElement.querySelector('.card-info');
+    const rightCardInfo = rightCardElement.querySelector('.card-info');
+    
     const currentSet = castSets[currentSetIndex];
     const leftImg = castMembers[currentSet[0]];
     const centerImg = castMembers[currentSet[1]];
     const rightImg = castMembers[currentSet[2]];
+    
+    const leftInfo = castInfo[currentSet[0]];
+    const centerInfo = castInfo[currentSet[1]];
+    const rightInfo = castInfo[currentSet[2]];
     
     if (animate && !isInitialLoad) {
         isAnimating = true;
@@ -58,6 +76,20 @@ function updateCardImages(animate = true) {
             
             rightCard.src = rightImg;
             rightCard.alt = rightImg.split('/').pop().split('.')[0];
+            
+            // Update actor and character names
+            if (leftCardInfo) {
+                leftCardInfo.querySelector('.actor-name').textContent = leftInfo.actor;
+                leftCardInfo.querySelector('.character-name').textContent = leftInfo.character;
+            }
+            if (centerCardInfo) {
+                centerCardInfo.querySelector('.actor-name').textContent = centerInfo.actor;
+                centerCardInfo.querySelector('.character-name').textContent = centerInfo.character;
+            }
+            if (rightCardInfo) {
+                rightCardInfo.querySelector('.actor-name').textContent = rightInfo.actor;
+                rightCardInfo.querySelector('.character-name').textContent = rightInfo.character;
+            }
             
             // Update CSS background images for the blur effect
             leftCardElement.style.setProperty('--bg-image-left', `url(${leftImg})`);
@@ -106,6 +138,20 @@ function updateCardImages(animate = true) {
         
         rightCard.src = rightImg;
         rightCard.alt = rightImg.split('/').pop().split('.')[0];
+        
+        // Update actor and character names
+        if (leftCardInfo) {
+            leftCardInfo.querySelector('.actor-name').textContent = leftInfo.actor;
+            leftCardInfo.querySelector('.character-name').textContent = leftInfo.character;
+        }
+        if (centerCardInfo) {
+            centerCardInfo.querySelector('.actor-name').textContent = centerInfo.actor;
+            centerCardInfo.querySelector('.character-name').textContent = centerInfo.character;
+        }
+        if (rightCardInfo) {
+            rightCardInfo.querySelector('.actor-name').textContent = rightInfo.actor;
+            rightCardInfo.querySelector('.character-name').textContent = rightInfo.character;
+        }
         
         // Update CSS background images for the blur effect
         leftCardElement.style.setProperty('--bg-image-left', `url(${leftImg})`);

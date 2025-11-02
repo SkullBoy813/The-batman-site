@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Batman</title>
     <link rel="stylesheet" href="src/assets/styles/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="src/assets/imgs/icon/batman-tdk-1.svg">
 </head>
 
 <body>
@@ -14,10 +15,9 @@
         <nav id="nav">
             <ul class="nav-list">
                 <li><a href="#">INICIO</a></li>
-                <li><a href="#">ELENCO</a></li>
-                <li><a href="#">DIRETOR</a></li>
-                <li><a href="#">SINOPSE</a></li>
-                <li><a href="#">INGRESSOS</a></li>
+                <li><a href="#section-2">ELENCO</a></li>
+                <li><a href="#section-3">DIRETOR</a></li>
+                <li><a href="#section-4">STREAMINGS</a></li>
             </ul>
         </nav>
         <img src="src/assets/imgs/Section 1/Warner Bors Logo.svg" class="warner-logo">
@@ -26,22 +26,81 @@
         <img src="src/assets/imgs/Section 1/Banner.svg" alt="Batman" class="bg-img">
     </section>
 
-    <section class="section-2">
-        <h1>ELENCO</h1>
+    <section id="section-2">
+        <div class="titulo">
+            <h1>ELENCO</h1>
+        </div>
         <div class="cards-container">
             <button class="nav-btn prev-btn" id="prevBtn">‹</button>
             <div class="cards">
                 <div class="card secundario">
                     <img src="src/assets/imgs/Section 2/Zöe Kravitz.webp" alt="Zoe Kravitz">
+                    <div class="card-info">
+                        <h3 class="actor-name">Zöe Kravitz</h3>
+                        <p class="character-name">Selina Kyle / Catwoman</p>
+                    </div>
                 </div>
                 <div class="card destaque">
                     <img src="src/assets/imgs/Section 2/Robert Pattison.webp" alt="Robert Pattinson">
+                    <div class="card-info">
+                        <h3 class="actor-name">Robert Pattinson</h3>
+                        <p class="character-name">Bruce Wayne / Batman</p>
+                    </div>
                 </div>
                 <div class="card secundario">
                     <img src="src/assets/imgs/Section 2/Paul Dano.jpg" alt="Paul Dano">
+                    <div class="card-info">
+                        <h3 class="actor-name">Paul Dano</h3>
+                        <p class="character-name">Edward Nashton / The Riddler</p>
+                    </div>
                 </div>
             </div>
             <button class="nav-btn next-btn" id="nextBtn">›</button>
+        </div>
+    </section>
+    <section id="section-3">
+        <h1>DIRETOR</h1>
+        <div class="cards">
+            <div class="card matt-reeves">
+                <img src="src/assets/imgs/Section 3/Matt Reeves.jpeg" alt="Matt Reeves">
+                <div class="card-info">
+                    <h3 class="actor-name">Matt Reeves</h3>
+                    <p class="character-name">Diretor</p>
+                </div>
+            </div>
+        </div>
+        <div class="vertical-line"></div>
+
+        <div class="info">
+            <p>The Batman (2022), dirigido por Matt Reeves, mostra Bruce Wayne em seus primeiros anos como o vigilante
+                de Gotham. Quando o sádico Charada deixa uma trilha de enigmas e mortes entre a elite corrupta da
+                cidade, Batman mergulha em uma investigação sombria que o força a confrontar não só os criminosos, mas
+                também seus próprios limites e traumas.</p>
+        </div>
+    </section>
+    <section id="section-4">
+        <h1>ASSISTA NAS SEGUINTES PLATAFORMAS</h1>
+        <div class="streaming-platforms">
+            <div class="platform-card">
+                <div class="platform-icon">🎬</div>
+                <h3>HBO Max</h3>
+                <p>Streaming com filme completo</p>
+            </div>
+            <div class="platform-card">
+                <div class="platform-icon">🎭</div>
+                <h3>Amazon Prime Video</h3>
+                <p>Aluguel e compra digital</p>
+            </div>
+            <div class="platform-card">
+                <div class="platform-icon">🎪</div>
+                <h3>Apple TV+</h3>
+                <p>Disponível para alugar</p>
+            </div>
+            <div class="platform-card">
+                <div class="platform-icon">🎯</div>
+                <h3>Google Play</h3>
+                <p>Aluguel e compra digital</p>
+            </div>
         </div>
     </section>
     <script src="src/assets/scripts/card-switcher.js"></script>

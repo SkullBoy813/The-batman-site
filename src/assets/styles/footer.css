@@ -1,7 +1,25 @@
+@import url(vars.css);
+
 footer {
-  background: #2c0505;
+  background: #000000;
   padding: 20px;
   text-align: center;
   color: #eee8e8;
   font-size: 14px;
+  font-family: var(--default-font);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+        font-size: 10px;
+    }
 }

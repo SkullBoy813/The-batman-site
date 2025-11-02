@@ -1,7 +1,12 @@
 @import url(header.css);
 
 @import url(section_1.css);
-@import url(blur_section1-2.css);
 @import url(section_2.css);
+@import url(section_3.css);
+@import url(section_4.css);
 
 @import url(footer.css);
+
+html {
+    scroll-behavior: smooth;
+}

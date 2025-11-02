@@ -1,6 +1,7 @@
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
     height: 100px;
 }
@@ -9,6 +10,20 @@ header {
     width: auto;
     height: 70%;
     margin: 15px;
+}
+
+#nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 #nav li{
@@ -37,5 +52,49 @@ header {
     width: auto;
     height: 70%;
     margin: 15px;
+}
+
+/* Responsive Header */
+@media (max-width: 1024px) {
+    #nav a {
+        font-size: 28px;
+    }
+    
+    #nav li {
+        padding: 15px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .dc-logo, .warner-logo {
+        display: none;
+    }
+    
+    #nav {
+        width: 100%;
+    }
+    
+    #nav li {
+        display: block;
+        padding: 10px;
+        margin: 5px 0;
+    }
+    
+    #nav a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav a {
+        font-size: 18px;
+    }
 }
 

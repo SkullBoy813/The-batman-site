@@ -1,0 +1,144 @@
+#section-3 { 
+    background-color: black;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    height: 100%;
+}
+
+.matt-reeves {
+    margin-left: 150px;
+    margin-top: 40px;
+    width: 400px;
+    height: 600px;
+}
+
+.vertical-line {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: calc(100% - 180px);
+    background: linear-gradient(180deg, transparent, var(--bright-red), transparent);
+    box-shadow: 
+        0 0 10px rgba(242, 7, 7, 0.8),
+        0 0 20px rgba(242, 7, 7, 0.6),
+        0 0 30px rgba(242, 7, 7, 0.4),
+        0 0 40px rgba(242, 7, 7, 0.2);
+    z-index: 1;
+}
+
+.info {
+    margin-top: 70px;
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    height: 570px;
+    width: 430px;
+    z-index: 2;
+    background:linear-gradient(190deg, #ff000069, #0202029a);;
+}
+
+.info p{
+    font-family: var(--default-font);
+    font-weight: lighter;
+    color: white;
+    font-size: 36px;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+/* Responsive Section 3 */
+@media (max-width: 1200px) {
+    .matt-reeves {
+        width: 350px;
+        height: 525px;
+        margin-left: 100px;
+    }
+    
+    .info {
+        width: 400px;
+        height: 500px;
+        right: 100px;
+    }
+    
+    .info p {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 968px) {
+    .section-3 {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+    
+    .matt-reeves {
+        width: 300px;
+        height: 450px;
+        margin-left: 50px;
+    }
+    
+    .info {
+        width: 350px;
+        height: 450px;
+        right: 50px;
+    }
+    
+    .info p {
+        font-size: 24px;
+        padding: 20px;
+    }
+    
+    .vertical-line {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-3 {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .matt-reeves {
+        width: 250px;
+        height: 375px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .info {
+        position: relative;
+        margin-top: 40px;
+        right: 0;
+        top: 0;
+        transform: none;
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+    }
+    
+    .info p {
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .matt-reeves {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .info p {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
